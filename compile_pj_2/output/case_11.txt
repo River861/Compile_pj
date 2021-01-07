@@ -1,0 +1,217 @@
+line 5: integer out of range.
+line 14: string with tab.
+line 17: string with tab.
+line 23: string over long.
+line 35: id over long.
+line 44: bad char.
+line 50: unterminated string.
+line 53: unterminated string.
+line 56: unterminated string.
+line 75: unterminated comment.
+test_11
+|
++--- test_case_list
+     |
+     +--- test_case
+     |    |
+     |    +--- (* valid integer *)
+     |    |
+     |    +--- number
+     |         |
+     |         +--- 11111111
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an out of range integer *)
+     |    |
+     |    +--- 11111111111111111111
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an very large real -- still acceptable though *)
+     |    |
+     |    +--- number
+     |         |
+     |         +--- 123456789012345678901234567890.0
+     |
+     +--- test_case
+     |    |
+     |    +--- (* a valid string*)
+     |    |
+     |    +--- "abcdefg"
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an invalid string with tab in it *)
+     |    |
+     |    +--- "abcde	g"
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an invalid string with many tabs in it *)
+     |    |
+     |    +--- "abcde			g"
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an ok string *)
+     |    |
+     |    +--- "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345"
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an overly long string *)
+     |    |
+     |    +--- "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456"
+     |
+     +--- test_case
+     |    |
+     |    +--- (* another ok string *)
+     |    |
+     |    +--- ""
+     |
+     +--- test_case
+     |    |
+     |    +--- (* another ok string *)
+     |    |
+     |    +--- "(*"
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an ok identifier *)
+     |    |
+     |    +--- x12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an overly long identifier *)
+     |    |
+     |    +--- x123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an ok line *)
+     |    |
+     |    +--- statement
+     |         |
+     |         +--- statement
+     |         |    |
+     |         |    +--- decl_list
+     |         |    |    |
+     |         |    |    +--- expression
+     |         |    |    |    |
+     |         |    |    |    +--- expression
+     |         |    |    |    |    |
+     |         |    |    |    |    +--- lvalue
+     |         |    |    |    |         |
+     |         |    |    |    |         +--- x
+     |         |    |    |    |
+     |         |    |    |    +--- binary-op
+     |         |    |    |    |    |
+     |         |    |    |    |    +--- <
+     |         |    |    |    |
+     |         |    |    |    +--- expression
+     |         |    |    |         |
+     |         |    |    |         +--- number
+     |         |    |    |              |
+     |         |    |    |              +--- 7
+     |         |    |    |
+     |         |    |    +--- statement
+     |         |    |         |
+     |         |    |         +--- lvalue
+     |         |    |         |    |
+     |         |    |         |    +--- y
+     |         |    |         |
+     |         |    |         +--- expression
+     |         |    |              |
+     |         |    |              +--- expression
+     |         |    |              |    |
+     |         |    |              |    +--- lvalue
+     |         |    |              |         |
+     |         |    |              |         +--- y
+     |         |    |              |
+     |         |    |              +--- binary-op
+     |         |    |              |    |
+     |         |    |              |    +--- +
+     |         |    |              |
+     |         |    |              +--- expression
+     |         |    |                   |
+     |         |    |                   +--- number
+     |         |    |                        |
+     |         |    |                        +--- 17
+     |         |    |
+     |         |    +--- (* 这一行原本为if x<7then y:=y+17，不符合语法规则，但为了显示出后面的词法分析效果，把这行的错误进行了更正 *)
+     |         |
+     |         +--- (* should lex as two tokens *)
+     |
+     +--- test_case
+     |    |
+     |    +--- number
+     |    |    |
+     |    |    +--- 123.
+     |    |
+     |    +--- x
+     |
+     +--- test_case
+     |    |
+     |    +--- (* a bad character (bell) *)
+     |    |
+     |    +--- [Bad Char]
+     |
+     +--- test_case
+     |    |
+     |    +--- xx
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an ok comment with an embedded	tab 
+and cr *)
+     |    |
+     |    +--- yy
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an unterminated string *)
+     |    |
+     |    +--- "abc
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an unterminated string *)
+     |    |
+     |    +--- "abc(**)
+     |
+     +--- test_case
+     |    |
+     |    +--- (* an unterminated string *)
+     |    |
+     |    +--- "abc(*123*)
+     |
+     +--- test_case
+     |    |
+     |    +--- (* a terminated string *)
+     |    |
+     |    +--- "abc(*abcabcc*)"
+     |
+     +--- test_case
+          |
+          +--- (* difficult cases: valid *)
+          |
+          +--- (*************)
+          |
+          +--- (* difficult cases: valid *)
+          |
+          +--- (*******(*****(*)
+          |
+          +--- (* difficult cases: valid *)
+          |
+          +--- (*123***123213**21****)
+          |
+          +--- (* difficult cases: valid *)
+          |
+          +--- (*""*)
+          |
+          +--- (* difficult cases: an unterminated comment *)
+          |
+          +--- (****123**
+

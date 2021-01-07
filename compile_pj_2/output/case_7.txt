@@ -1,0 +1,137 @@
+progarm
+|
++--- body
+     |
+     +--- decl_list
+     |    |
+     |    +--- var_decl_list
+     |    |    |
+     |    |    +--- var_decl
+     |    |         |
+     |    |         +--- ID_list
+     |    |         |    |
+     |    |         |    +--- I
+     |    |         |
+     |    |         +--- type
+     |    |         |    |
+     |    |         |    +--- INTEGER
+     |    |         |
+     |    |         +--- expression
+     |    |              |
+     |    |              +--- number
+     |    |                   |
+     |    |                   +--- 0
+     |    |
+     |    +--- procedure_decl_list
+     |    |    |
+     |    |    +--- procedure_decl
+     |    |         |
+     |    |         +--- ADDONE
+     |    |         |
+     |    |         +--- formal_params
+     |    |         |
+     |    |         +--- body
+     |    |              |
+     |    |              +--- decl_list
+     |    |              |
+     |    |              +--- statement_list
+     |    |                   |
+     |    |                   +--- statement
+     |    |                        |
+     |    |                        +--- lvalue
+     |    |                        |    |
+     |    |                        |    +--- I
+     |    |                        |
+     |    |                        +--- expression
+     |    |                             |
+     |    |                             +--- expression
+     |    |                             |    |
+     |    |                             |    +--- lvalue
+     |    |                             |         |
+     |    |                             |         +--- I
+     |    |                             |
+     |    |                             +--- binary-op
+     |    |                             |    |
+     |    |                             |    +--- +
+     |    |                             |
+     |    |                             +--- expression
+     |    |                                  |
+     |    |                                  +--- number
+     |    |                                       |
+     |    |                                       +--- 1
+     |    |
+     |    +--- procedure_decl_list
+     |         |
+     |         +--- procedure_decl
+     |              |
+     |              +--- PASSTHEBUCK
+     |              |
+     |              +--- formal_params
+     |              |
+     |              +--- body
+     |                   |
+     |                   +--- decl_list
+     |                   |
+     |                   +--- statement_list
+     |                        |
+     |                        +--- statement
+     |                             |
+     |                             +--- ADDONE
+     |                             |
+     |                             +--- actual_params
+     |
+     +--- statement_list
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- "I = "
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- expression
+          |         |         |
+          |         |         +--- lvalue
+          |         |              |
+          |         |              +--- I
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- " (SHOULD BE 0)"
+          |
+          +--- statement
+          |    |
+          |    +--- PASSTHEBUCK
+          |    |
+          |    +--- actual_params
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- "I = "
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- expression
+          |         |         |
+          |         |         +--- lvalue
+          |         |              |
+          |         |              +--- I
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- " (SHOULD BE 1)"
+          |
+          +--- statement
+               |
+               +--- write_params
+                    |
+                    +--- write_expr
+                         |
+                         +--- "ALL DONE!"

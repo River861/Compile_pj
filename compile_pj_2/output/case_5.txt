@@ -1,0 +1,205 @@
+progarm
+|
++--- body
+     |
+     +--- decl_list
+     |    |
+     |    +--- var_decl_list
+     |         |
+     |         +--- var_decl
+     |              |
+     |              +--- ID_list
+     |              |    |
+     |              |    +--- I
+     |              |    |
+     |              |    +--- J
+     |              |
+     |              +--- type
+     |              |    |
+     |              |    +--- INTEGER
+     |              |
+     |              +--- expression
+     |                   |
+     |                   +--- number
+     |                        |
+     |                        +--- 0
+     |
+     +--- statement_list
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- "Ascending loop:"
+          |
+          +--- statement
+          |    |
+          |    +--- I
+          |    |
+          |    +--- expression
+          |    |    |
+          |    |    +--- number
+          |    |         |
+          |    |         +--- 1
+          |    |
+          |    +--- expression
+          |    |    |
+          |    |    +--- number
+          |    |         |
+          |    |         +--- 5
+          |    |
+          |    +--- statement
+          |         |
+          |         +--- write_params
+          |              |
+          |              +--- write_expr
+          |              |    |
+          |              |    +--- "I = "
+          |              |
+          |              +--- write_expr
+          |                   |
+          |                   +--- expression
+          |                        |
+          |                        +--- lvalue
+          |                             |
+          |                             +--- I
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- "Descending loop:"
+          |
+          +--- statement
+          |    |
+          |    +--- I
+          |    |
+          |    +--- expression
+          |    |    |
+          |    |    +--- number
+          |    |         |
+          |    |         +--- 5
+          |    |
+          |    +--- expression
+          |    |    |
+          |    |    +--- number
+          |    |         |
+          |    |         +--- 1
+          |    |
+          |    +--- expression
+          |    |    |
+          |    |    +--- unary-op
+          |    |    |    |
+          |    |    |    +--- -
+          |    |    |
+          |    |    +--- expression
+          |    |         |
+          |    |         +--- number
+          |    |              |
+          |    |              +--- 1
+          |    |
+          |    +--- statement
+          |         |
+          |         +--- write_params
+          |              |
+          |              +--- write_expr
+          |              |    |
+          |              |    +--- "I = "
+          |              |
+          |              +--- write_expr
+          |                   |
+          |                   +--- expression
+          |                        |
+          |                        +--- lvalue
+          |                             |
+          |                             +--- I
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- "Double loop:"
+          |
+          +--- statement
+               |
+               +--- I
+               |
+               +--- expression
+               |    |
+               |    +--- number
+               |         |
+               |         +--- 1
+               |
+               +--- expression
+               |    |
+               |    +--- number
+               |         |
+               |         +--- 5
+               |
+               +--- statement
+                    |
+                    +--- J
+                    |
+                    +--- expression
+                    |    |
+                    |    +--- lvalue
+                    |         |
+                    |         +--- I
+                    |
+                    +--- expression
+                    |    |
+                    |    +--- expression
+                    |    |    |
+                    |    |    +--- lvalue
+                    |    |         |
+                    |    |         +--- I
+                    |    |
+                    |    +--- binary-op
+                    |    |    |
+                    |    |    +--- +
+                    |    |
+                    |    +--- expression
+                    |         |
+                    |         +--- number
+                    |              |
+                    |              +--- 10
+                    |
+                    +--- expression
+                    |    |
+                    |    +--- number
+                    |         |
+                    |         +--- 2
+                    |
+                    +--- statement
+                         |
+                         +--- write_params
+                              |
+                              +--- write_expr
+                              |    |
+                              |    +--- "I,J = "
+                              |
+                              +--- write_expr
+                              |    |
+                              |    +--- expression
+                              |         |
+                              |         +--- lvalue
+                              |              |
+                              |              +--- I
+                              |
+                              +--- write_expr
+                              |    |
+                              |    +--- ", "
+                              |
+                              +--- write_expr
+                                   |
+                                   +--- expression
+                                        |
+                                        +--- lvalue
+                                             |
+                                             +--- J

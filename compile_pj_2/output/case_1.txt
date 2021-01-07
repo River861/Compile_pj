@@ -1,0 +1,119 @@
+progarm
+|
++--- body
+     |
+     +--- decl_list
+     |    |
+     |    +--- var_decl_list
+     |    |    |
+     |    |    +--- var_decl
+     |    |         |
+     |    |         +--- ID_list
+     |    |         |    |
+     |    |         |    +--- i
+     |    |         |    |
+     |    |         |    +--- j
+     |    |         |
+     |    |         +--- type
+     |    |         |    |
+     |    |         |    +--- INTEGER
+     |    |         |
+     |    |         +--- expression
+     |    |              |
+     |    |              +--- number
+     |    |                   |
+     |    |                   +--- 1
+     |    |
+     |    +--- var_decl_list
+     |    |    |
+     |    |    +--- var_decl
+     |    |         |
+     |    |         +--- ID_list
+     |    |         |    |
+     |    |         |    +--- x
+     |    |         |
+     |    |         +--- type
+     |    |         |    |
+     |    |         |    +--- REAL
+     |    |         |
+     |    |         +--- expression
+     |    |              |
+     |    |              +--- number
+     |    |                   |
+     |    |                   +--- 2.0
+     |    |
+     |    +--- var_decl_list
+     |         |
+     |         +--- var_decl
+     |              |
+     |              +--- ID_list
+     |              |    |
+     |              |    +--- y
+     |              |
+     |              +--- type
+     |              |    |
+     |              |    +--- REAL
+     |              |
+     |              +--- expression
+     |                   |
+     |                   +--- number
+     |                        |
+     |                        +--- 3.0
+     |
+     +--- statement_list
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- "i = "
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- expression
+          |         |         |
+          |         |         +--- lvalue
+          |         |              |
+          |         |              +--- i
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- ", j = "
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- expression
+          |                   |
+          |                   +--- lvalue
+          |                        |
+          |                        +--- j
+          |
+          +--- statement
+               |
+               +--- write_params
+                    |
+                    +--- write_expr
+                    |    |
+                    |    +--- "x = "
+                    |
+                    +--- write_expr
+                    |    |
+                    |    +--- expression
+                    |         |
+                    |         +--- lvalue
+                    |              |
+                    |              +--- x
+                    |
+                    +--- write_expr
+                    |    |
+                    |    +--- ", y = "
+                    |
+                    +--- write_expr
+                         |
+                         +--- expression
+                              |
+                              +--- lvalue
+                                   |
+                                   +--- y

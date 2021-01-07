@@ -1,0 +1,263 @@
+progarm
+|
++--- body
+     |
+     +--- decl_list
+     |    |
+     |    +--- var_decl_list
+     |         |
+     |         +--- var_decl
+     |         |    |
+     |         |    +--- ID_list
+     |         |    |    |
+     |         |    |    +--- A
+     |         |    |    |
+     |         |    |    +--- B
+     |         |    |
+     |         |    +--- type
+     |         |    |    |
+     |         |    |    +--- REAL
+     |         |    |
+     |         |    +--- expression
+     |         |         |
+     |         |         +--- number
+     |         |              |
+     |         |              +--- 0.0
+     |         |
+     |         +--- var_decl
+     |              |
+     |              +--- ID_list
+     |              |    |
+     |              |    +--- C
+     |              |
+     |              +--- type
+     |              |    |
+     |              |    +--- REAL
+     |              |
+     |              +--- expression
+     |                   |
+     |                   +--- number
+     |                        |
+     |                        +--- 0.0
+     |
+     +--- statement_list
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- "ENTER TWO REALS:"
+          |
+          +--- statement
+          |    |
+          |    +--- lvalue
+          |    |    |
+          |    |    +--- A
+          |    |
+          |    +--- lvalue
+          |         |
+          |         +--- B
+          |
+          +--- statement
+          |    |
+          |    +--- lvalue
+          |    |    |
+          |    |    +--- C
+          |    |
+          |    +--- expression
+          |         |
+          |         +--- number
+          |              |
+          |              +--- 8.0
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- "A="
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- expression
+          |         |         |
+          |         |         +--- lvalue
+          |         |              |
+          |         |              +--- A
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- ", B="
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- expression
+          |         |         |
+          |         |         +--- lvalue
+          |         |              |
+          |         |              +--- B
+          |         |
+          |         +--- write_expr
+          |         |    |
+          |         |    +--- ", C="
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- expression
+          |                   |
+          |                   +--- lvalue
+          |                        |
+          |                        +--- C
+          |
+          +--- statement
+          |    |
+          |    +--- lvalue
+          |    |    |
+          |    |    +--- C
+          |    |
+          |    +--- expression
+          |         |
+          |         +--- expression
+          |         |    |
+          |         |    +--- lvalue
+          |         |         |
+          |         |         +--- A
+          |         |
+          |         +--- binary-op
+          |         |    |
+          |         |    +--- -
+          |         |
+          |         +--- expression
+          |              |
+          |              +--- expression
+          |              |    |
+          |              |    +--- expression
+          |              |         |
+          |              |         +--- unary-op
+          |              |         |    |
+          |              |         |    +--- -
+          |              |         |
+          |              |         +--- expression
+          |              |              |
+          |              |              +--- lvalue
+          |              |                   |
+          |              |                   +--- B
+          |              |
+          |              +--- binary-op
+          |              |    |
+          |              |    +--- +
+          |              |
+          |              +--- expression
+          |                   |
+          |                   +--- lvalue
+          |                        |
+          |                        +--- C
+          |
+          +--- statement
+          |    |
+          |    +--- lvalue
+          |    |    |
+          |    |    +--- C
+          |    |
+          |    +--- expression
+          |         |
+          |         +--- expression
+          |         |    |
+          |         |    +--- lvalue
+          |         |         |
+          |         |         +--- C
+          |         |
+          |         +--- binary-op
+          |         |    |
+          |         |    +--- +
+          |         |
+          |         +--- expression
+          |              |
+          |              +--- expression
+          |              |    |
+          |              |    +--- lvalue
+          |              |         |
+          |              |         +--- A
+          |              |
+          |              +--- binary-op
+          |              |    |
+          |              |    +--- *
+          |              |
+          |              +--- expression
+          |                   |
+          |                   +--- expression
+          |                        |
+          |                        +--- expression
+          |                        |    |
+          |                        |    +--- number
+          |                        |         |
+          |                        |         +--- 3
+          |                        |
+          |                        +--- binary-op
+          |                        |    |
+          |                        |    +--- +
+          |                        |
+          |                        +--- expression
+          |                             |
+          |                             +--- expression
+          |                             |    |
+          |                             |    +--- number
+          |                             |         |
+          |                             |         +--- 5
+          |                             |
+          |                             +--- binary-op
+          |                             |    |
+          |                             |    +--- *
+          |                             |
+          |                             +--- expression
+          |                                  |
+          |                                  +--- number
+          |                                       |
+          |                                       +--- 2
+          |
+          +--- statement
+               |
+               +--- write_params
+                    |
+                    +--- write_expr
+                         |
+                         +--- expression
+                              |
+                              +--- expression
+                              |    |
+                              |    +--- unary-op
+                              |    |    |
+                              |    |    +--- -
+                              |    |
+                              |    +--- expression
+                              |         |
+                              |         +--- lvalue
+                              |              |
+                              |              +--- C
+                              |
+                              +--- binary-op
+                              |    |
+                              |    +--- /
+                              |
+                              +--- expression
+                                   |
+                                   +--- expression
+                                        |
+                                        +--- expression
+                                        |    |
+                                        |    +--- lvalue
+                                        |         |
+                                        |         +--- A
+                                        |
+                                        +--- binary-op
+                                        |    |
+                                        |    +--- +
+                                        |
+                                        +--- expression
+                                             |
+                                             +--- number
+                                                  |
+                                                  +--- 1

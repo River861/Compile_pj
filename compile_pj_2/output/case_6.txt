@@ -1,0 +1,159 @@
+progarm
+|
++--- body
+     |
+     +--- decl_list
+     |    |
+     |    +--- procedure_decl_list
+     |    |    |
+     |    |    +--- procedure_decl
+     |    |         |
+     |    |         +--- FOO
+     |    |         |
+     |    |         +--- formal_params
+     |    |         |    |
+     |    |         |    +--- fp_section
+     |    |         |    |    |
+     |    |         |    |    +--- ID_list
+     |    |         |    |    |    |
+     |    |         |    |    |    +--- X
+     |    |         |    |    |
+     |    |         |    |    +--- type
+     |    |         |    |         |
+     |    |         |    |         +--- INT
+     |    |         |    |
+     |    |         |    +--- fp_section
+     |    |         |         |
+     |    |         |         +--- ID_list
+     |    |         |         |    |
+     |    |         |         |    +--- Y
+     |    |         |         |
+     |    |         |         +--- type
+     |    |         |              |
+     |    |         |              +--- REAL
+     |    |         |
+     |    |         +--- type
+     |    |         |    |
+     |    |         |    +--- REAL
+     |    |         |
+     |    |         +--- body
+     |    |              |
+     |    |              +--- decl_list
+     |    |              |    |
+     |    |              |    +--- procedure_decl_list
+     |    |              |         |
+     |    |              |         +--- procedure_decl
+     |    |              |              |
+     |    |              |              +--- BAR
+     |    |              |              |
+     |    |              |              +--- formal_params
+     |    |              |              |
+     |    |              |              +--- body
+     |    |              |                   |
+     |    |              |                   +--- decl_list
+     |    |              |                   |
+     |    |              |                   +--- statement_list
+     |    |              |                        |
+     |    |              |                        +--- statement
+     |    |              |                             |
+     |    |              |                             +--- lvalue
+     |    |              |                             |    |
+     |    |              |                             |    +--- Y
+     |    |              |                             |
+     |    |              |                             +--- expression
+     |    |              |                                  |
+     |    |              |                                  +--- expression
+     |    |              |                                  |    |
+     |    |              |                                  |    +--- lvalue
+     |    |              |                                  |         |
+     |    |              |                                  |         +--- X
+     |    |              |                                  |
+     |    |              |                                  +--- binary-op
+     |    |              |                                  |    |
+     |    |              |                                  |    +--- +
+     |    |              |                                  |
+     |    |              |                                  +--- expression
+     |    |              |                                       |
+     |    |              |                                       +--- number
+     |    |              |                                            |
+     |    |              |                                            +--- 1.0
+     |    |              |
+     |    |              +--- statement_list
+     |    |                   |
+     |    |                   +--- statement
+     |    |                   |    |
+     |    |                   |    +--- BAR
+     |    |                   |    |
+     |    |                   |    +--- actual_params
+     |    |                   |
+     |    |                   +--- return_statement
+     |    |                        |
+     |    |                        +--- expression
+     |    |                             |
+     |    |                             +--- lvalue
+     |    |                                  |
+     |    |                                  +--- Y
+     |    |
+     |    +--- var_decl_list
+     |         |
+     |         +--- var_decl
+     |              |
+     |              +--- ID_list
+     |              |    |
+     |              |    +--- C
+     |              |
+     |              +--- type
+     |              |    |
+     |              |    +--- REAL
+     |              |
+     |              +--- expression
+     |                   |
+     |                   +--- number
+     |                        |
+     |                        +--- 0
+     |
+     +--- statement_list
+          |
+          +--- statement
+          |    |
+          |    +--- lvalue
+          |    |    |
+          |    |    +--- C
+          |    |
+          |    +--- expression
+          |         |
+          |         +--- FOO
+          |         |
+          |         +--- actual_params
+          |              |
+          |              +--- expression
+          |              |    |
+          |              |    +--- number
+          |              |         |
+          |              |         +--- 3
+          |              |
+          |              +--- expression
+          |                   |
+          |                   +--- number
+          |                        |
+          |                        +--- 2.0
+          |
+          +--- statement
+               |
+               +--- write_params
+                    |
+                    +--- write_expr
+                    |    |
+                    |    +--- "C = "
+                    |
+                    +--- write_expr
+                    |    |
+                    |    +--- expression
+                    |         |
+                    |         +--- lvalue
+                    |              |
+                    |              +--- C
+                    |
+                    +--- write_expr
+                         |
+                         +--- " (should be 4.0)"

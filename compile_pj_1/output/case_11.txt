@@ -1,0 +1,63 @@
+ROW COL TYPE                TOKEN/ERROR MESSAGE
+1   1   comment             (* valid integer *)
+2   1   integer             11111111
+4   1   comment             (* an out of range integer *)
+5   1   -                   out of range integer
+7   1   comment             (* an very large real -- still acceptable though *)
+8   1   real                123456789012345678901234567890.0
+10  1   comment             (* a valid string*)
+11  1   string              "abcdefg"
+13  1   comment             (* an invalid string with tab in it *)
+14  1   -                   invalid string with tab in it
+16  1   comment             (* an invalid string with many tabs in it *)
+17  1   -                   invalid string with tab in it
+19  1   comment             (* an ok string *)
+20  1   string              "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345"
+22  1   comment             (* an overly long string *)
+23  1   -                   overly long string
+25  1   comment             (* another ok string *)
+26  1   string              ""
+28  1   comment             (* another ok string *)
+29  1   string              "(*"
+31  1   comment             (* an ok identifier *)
+32  1   identifier          x12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234
+34  1   comment             (* an overly long identifier *)
+35  1   -                   overly long identifier
+37  1   comment             (* an ok line *)
+38  1   identifier          if
+38  4   identifier          x
+38  5   operator            <
+38  6   integer             7
+38  7   identifier          then
+38  12  identifier          y
+38  13  operator            :=
+38  15  identifier          y
+38  16  operator            +
+38  17  integer             17
+40  1   comment             (* should lex as two tokens *)
+41  1   real                123.
+41  5   identifier          x
+43  1   comment             (* a bad character (bell) *)
+44  1   -                   bad character
+46  1   identifier          xx
+46  3   comment             (* an ok comment with an embedded	tab 
+and cr *)
+47  10  identifier          yy
+49  1   comment             (* an unterminated string *)
+50  1   -                   unterminated string
+52  1   comment             (* an unterminated string *)
+53  1   -                   unterminated string
+55  1   comment             (* an unterminated string *)
+56  1   -                   unterminated string
+58  1   comment             (* a terminated string *)
+59  1   string              "abc(*abcabcc*)"
+61  1   comment             (* difficult cases: valid *)
+62  1   comment             (*************)
+64  1   comment             (* difficult cases: valid *)
+65  1   comment             (*******(*****(*)
+67  1   comment             (* difficult cases: valid *)
+68  1   comment             (*123***123213**21****)
+70  1   comment             (* difficult cases: valid *)
+71  1   comment             (*""*)
+73  1   comment             (* difficult cases: an unterminated comment *)
+74  1   -                   unterminated comment

@@ -1,0 +1,281 @@
+progarm
+|
++--- body
+     |
+     +--- decl_list
+     |    |
+     |    +--- var_decl_list
+     |    |    |
+     |    |    +--- var_decl
+     |    |         |
+     |    |         +--- ID_list
+     |    |         |    |
+     |    |         |    +--- I
+     |    |         |    |
+     |    |         |    +--- J
+     |    |         |    |
+     |    |         |    +--- ANSWER
+     |    |         |
+     |    |         +--- type
+     |    |         |    |
+     |    |         |    +--- INTEGER
+     |    |         |
+     |    |         +--- expression
+     |    |              |
+     |    |              +--- number
+     |    |                   |
+     |    |                   +--- 0
+     |    |
+     |    +--- procedure_decl_list
+     |         |
+     |         +--- procedure_decl
+     |              |
+     |              +--- FACTORIAL
+     |              |
+     |              +--- formal_params
+     |              |
+     |              +--- body
+     |                   |
+     |                   +--- decl_list
+     |                   |    |
+     |                   |    +--- procedure_decl_list
+     |                   |         |
+     |                   |         +--- procedure_decl
+     |                   |         |    |
+     |                   |         |    +--- FACT
+     |                   |         |    |
+     |                   |         |    +--- formal_params
+     |                   |         |    |
+     |                   |         |    +--- body
+     |                   |         |         |
+     |                   |         |         +--- decl_list
+     |                   |         |         |
+     |                   |         |         +--- statement_list
+     |                   |         |              |
+     |                   |         |              +--- statement
+     |                   |         |              |    |
+     |                   |         |              |    +--- MULT
+     |                   |         |              |    |
+     |                   |         |              |    +--- actual_params
+     |                   |         |              |
+     |                   |         |              +--- decl_list
+     |                   |         |                   |
+     |                   |         |                   +--- expression
+     |                   |         |                   |    |
+     |                   |         |                   |    +--- expression
+     |                   |         |                   |    |    |
+     |                   |         |                   |    |    +--- lvalue
+     |                   |         |                   |    |         |
+     |                   |         |                   |    |         +--- J
+     |                   |         |                   |    |
+     |                   |         |                   |    +--- binary-op
+     |                   |         |                   |    |    |
+     |                   |         |                   |    |    +--- <>
+     |                   |         |                   |    |
+     |                   |         |                   |    +--- expression
+     |                   |         |                   |         |
+     |                   |         |                   |         +--- lvalue
+     |                   |         |                   |              |
+     |                   |         |                   |              +--- I
+     |                   |         |                   |
+     |                   |         |                   +--- statement
+     |                   |         |                   |    |
+     |                   |         |                   |    +--- lvalue
+     |                   |         |                   |    |    |
+     |                   |         |                   |    |    +--- J
+     |                   |         |                   |    |
+     |                   |         |                   |    +--- expression
+     |                   |         |                   |         |
+     |                   |         |                   |         +--- expression
+     |                   |         |                   |         |    |
+     |                   |         |                   |         |    +--- lvalue
+     |                   |         |                   |         |         |
+     |                   |         |                   |         |         +--- J
+     |                   |         |                   |         |
+     |                   |         |                   |         +--- binary-op
+     |                   |         |                   |         |    |
+     |                   |         |                   |         |    +--- +
+     |                   |         |                   |         |
+     |                   |         |                   |         +--- expression
+     |                   |         |                   |              |
+     |                   |         |                   |              +--- number
+     |                   |         |                   |                   |
+     |                   |         |                   |                   +--- 1
+     |                   |         |                   |
+     |                   |         |                   +--- statement
+     |                   |         |                        |
+     |                   |         |                        +--- FACT
+     |                   |         |                        |
+     |                   |         |                        +--- actual_params
+     |                   |         |
+     |                   |         +--- procedure_decl
+     |                   |              |
+     |                   |              +--- MULT
+     |                   |              |
+     |                   |              +--- formal_params
+     |                   |              |
+     |                   |              +--- body
+     |                   |                   |
+     |                   |                   +--- decl_list
+     |                   |                   |
+     |                   |                   +--- statement_list
+     |                   |                        |
+     |                   |                        +--- statement
+     |                   |                             |
+     |                   |                             +--- lvalue
+     |                   |                             |    |
+     |                   |                             |    +--- ANSWER
+     |                   |                             |
+     |                   |                             +--- expression
+     |                   |                                  |
+     |                   |                                  +--- expression
+     |                   |                                  |    |
+     |                   |                                  |    +--- lvalue
+     |                   |                                  |         |
+     |                   |                                  |         +--- ANSWER
+     |                   |                                  |
+     |                   |                                  +--- binary-op
+     |                   |                                  |    |
+     |                   |                                  |    +--- *
+     |                   |                                  |
+     |                   |                                  +--- expression
+     |                   |                                       |
+     |                   |                                       +--- lvalue
+     |                   |                                            |
+     |                   |                                            +--- J
+     |                   |
+     |                   +--- statement_list
+     |                        |
+     |                        +--- statement
+     |                        |    |
+     |                        |    +--- lvalue
+     |                        |    |    |
+     |                        |    |    +--- ANSWER
+     |                        |    |
+     |                        |    +--- expression
+     |                        |         |
+     |                        |         +--- number
+     |                        |              |
+     |                        |              +--- 1
+     |                        |
+     |                        +--- statement
+     |                        |    |
+     |                        |    +--- lvalue
+     |                        |    |    |
+     |                        |    |    +--- J
+     |                        |    |
+     |                        |    +--- expression
+     |                        |         |
+     |                        |         +--- number
+     |                        |              |
+     |                        |              +--- 1
+     |                        |
+     |                        +--- statement
+     |                             |
+     |                             +--- FACT
+     |                             |
+     |                             +--- actual_params
+     |
+     +--- statement_list
+          |
+          +--- statement
+          |    |
+          |    +--- write_params
+          |         |
+          |         +--- write_expr
+          |              |
+          |              +--- "The first 5 factorials are (in descending order):"
+          |
+          +--- statement
+          |    |
+          |    +--- lvalue
+          |    |    |
+          |    |    +--- I
+          |    |
+          |    +--- expression
+          |         |
+          |         +--- number
+          |              |
+          |              +--- 5
+          |
+          +--- statement
+               |
+               +--- decl_list
+               |    |
+               |    +--- expression
+               |    |    |
+               |    |    +--- expression
+               |    |    |    |
+               |    |    |    +--- lvalue
+               |    |    |         |
+               |    |    |         +--- I
+               |    |    |
+               |    |    +--- binary-op
+               |    |    |    |
+               |    |    |    +--- <=
+               |    |    |
+               |    |    +--- expression
+               |    |         |
+               |    |         +--- number
+               |    |              |
+               |    |              +--- 0
+               |    |
+               |    +--- exit_statement
+               |
+               +--- statement
+               |    |
+               |    +--- FACTORIAL
+               |    |
+               |    +--- actual_params
+               |
+               +--- statement
+               |    |
+               |    +--- write_params
+               |         |
+               |         +--- write_expr
+               |         |    |
+               |         |    +--- "FACTORIAL("
+               |         |
+               |         +--- write_expr
+               |         |    |
+               |         |    +--- expression
+               |         |         |
+               |         |         +--- lvalue
+               |         |              |
+               |         |              +--- I
+               |         |
+               |         +--- write_expr
+               |         |    |
+               |         |    +--- ") = "
+               |         |
+               |         +--- write_expr
+               |              |
+               |              +--- expression
+               |                   |
+               |                   +--- lvalue
+               |                        |
+               |                        +--- ANSWER
+               |
+               +--- statement
+                    |
+                    +--- lvalue
+                    |    |
+                    |    +--- I
+                    |
+                    +--- expression
+                         |
+                         +--- expression
+                         |    |
+                         |    +--- lvalue
+                         |         |
+                         |         +--- I
+                         |
+                         +--- binary-op
+                         |    |
+                         |    +--- -
+                         |
+                         +--- expression
+                              |
+                              +--- number
+                                   |
+                                   +--- 1
